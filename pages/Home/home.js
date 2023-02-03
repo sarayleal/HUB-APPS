@@ -1,4 +1,4 @@
-import "./home.css";
+import "./Home.css";
 
 const template = () => `
     <section class="Home">

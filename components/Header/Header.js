@@ -1,13 +1,13 @@
-import { initContent } from "../../main";
+import { initContent } from "../../main"
 import "./Header.css";
 
 const template = () => `
 <nav>
 <ul>
 <li>
-<a href="#" id="homelink">Home</a>
-<a href="#" id="gameslink">Games</a>
-<a href="#" id="randomcolorlink">Random Color</a>   
+<a href="#" id="Homelink">Home</a>
+<a href="#" id="Gameslink">Games</a>
+<a href="#" id="Colorlink">Color</a>   
 </a>
 </li>
 </ul>
@@ -16,17 +16,17 @@ const template = () => `
 
 const addListeners = () => {
   document
-    .querySelector("#homelink")
+    .querySelector("#Homelink")
     .addEventListener("click", () => initContent("Home"));
   document
-    .querySelector("#gameslink")
+    .querySelector("#Gameslink")
     .addEventListener("click", () => initContent("Games"));
   document
-    .querySelector("#randomcolorlink")
-    .addEventListener("click", () => initContent("Random Color"));
+    .querySelector("#Colorlink")
+    .addEventListener("click", () => initContent("Color"));
 };
 
 export const printTemplate = () => {
-  document.querySelector("header").innerHTML = template();
-  addListeners();
+  document.querySelector("Header").innerHTML = template();
+addListeners();
 };

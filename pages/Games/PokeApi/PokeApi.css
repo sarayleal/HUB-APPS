@@ -1,17 +1,17 @@
-.Poke-Api {
+.PokeApi {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.Poke-Api > pokemonList {
+.PokeApi > pokemonList {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   width: 80%;
   grid-gap: 3rem;
 }
 
-.Poke-Api > pokemonList > img {
+.PokeApi > pokemonList > img {
   width: 100%;
 }

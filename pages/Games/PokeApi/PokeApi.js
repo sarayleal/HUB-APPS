@@ -1,4 +1,4 @@
-import "./poke-api.css";
+import "./PokeApi.css";
 
 
 let pokemonList = [];

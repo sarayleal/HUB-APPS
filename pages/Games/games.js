@@ -1,4 +1,4 @@
-import "./games.css";
+import "./Games.css";
 
 const template = () => `
 <section class="Games">
