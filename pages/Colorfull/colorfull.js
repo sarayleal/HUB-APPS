@@ -1,8 +1,8 @@
 import "./random-button.css";
 
 const template = () => `
-<section class="Random-Color">
-<h2>Color me</h2>
+<section class="Colorfull">
+<h2>Colorfull</h2>
 </section>
 `;
 
