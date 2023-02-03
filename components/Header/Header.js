@@ -8,6 +8,7 @@ const template = () => `
 <a href="#" id="Homelink">Home</a>
 <a href="#" id="Gameslink">Games</a>
 <a href="#" id="Colorlink">Color</a>   
+<a href="#" id="Gallerylink">Gallery</a>  
 </a>
 </li>
 </ul>
@@ -24,6 +25,9 @@ const addListeners = () => {
   document
     .querySelector("#Colorlink")
     .addEventListener("click", () => initContent("Color"));
+    document
+    .querySelector("#Gallerylink")
+    .addEventListener("click", () => initContent("Gallery"));
 };
 
 export const printTemplate = () => {
