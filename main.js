@@ -1,9 +1,10 @@
 import "./style.css";
-import { printTemplate as HeaderTemplate } from "./components/Header/Header"
+import { printTemplate as HeaderTemplate } from "./components/Header/Header";
 import { printTemplate as HomeTemplate } from "./pages/Home/Home";
 import { printTemplate as GamesTemplate } from "./pages/Games/Games";
 import { printTemplate as ColorTemplate } from "./pages/Color/Color";
-import { printTemplate as GaleryTemplate } from "./pages/Gallery/Gallery";
+import { printTemplate as PokeApiTemplate } from "./pages/PokeApi/PokeApi";
+
 
 export const initContent = (route) => {
   switch (route) {
@@ -19,9 +20,10 @@ export const initContent = (route) => {
     case "Color":
       ColorTemplate();
       break;
-      case "Gallery":
-      GalleryTemplate();
+    case "PokeApi":
+      PokeApiTemplate();
       break;
+    
   }
 };
 

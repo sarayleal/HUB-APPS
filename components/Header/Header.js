@@ -8,8 +8,7 @@ const template = () => `
 <a href="#" id="Homelink">Home</a>
 <a href="#" id="Gameslink">Games</a>
 <a href="#" id="Colorlink">Color</a>   
-<a href="#" id="Gallerylink">Gallery</a>  
-</a>
+<a href="#" id="PokeApiLink>PokeApi</a>
 </li>
 </ul>
 </nav>
@@ -25,9 +24,10 @@ const addListeners = () => {
   document
     .querySelector("#Colorlink")
     .addEventListener("click", () => initContent("Color"));
-    document
-    .querySelector("#Gallerylink")
-    .addEventListener("click", () => initContent("Gallery"));
+  document
+    .querySelector("#PokeApiLink")
+    .addEventListener("click", () => initContent("PokeApi"));
+  
 };
 
 export const printTemplate = () => {

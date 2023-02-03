@@ -1,5 +1,12 @@
 import "./PokeApi.css";
 
+const template = () => `
+<section class="PokeApi">
+<h2>PokeApi</h2>
+</section>
+`;
+
+
 
 let pokemonList = [];
 const getData = async () => {
@@ -13,6 +20,11 @@ const getData = async () => {
       console.log("no se ha podido hacer la peticion");
     }
   }
+};
+
+
+export const printTemplate = () => {
+  document.querySelector("#app").innerHTML = template();
 };
 
 
