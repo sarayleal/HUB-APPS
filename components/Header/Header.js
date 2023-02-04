@@ -1,14 +1,23 @@
-import { initContent } from "../../main"
-import "./Header.css";
+import { initContent } from "../../main";
+import "./Header.css"
 
 const template = () => `
 <nav>
 <ul>
 <li>
 <a href="#" id="Homelink">Home</a>
+</li>
+<li>
 <a href="#" id="Gameslink">Games</a>
+</li>
+<li>
 <a href="#" id="Colorlink">Color</a>   
-<a href="#" id="PokeApiLink>PokeApi</a>
+</li>
+<li>
+<a href="#" id="Pokelink">Poke</a>
+</li>
+<li>
+<a href="#" id="loginlink">Login</a>
 </li>
 </ul>
 </nav>
@@ -25,9 +34,11 @@ const addListeners = () => {
     .querySelector("#Colorlink")
     .addEventListener("click", () => initContent("Color"));
   document
-    .querySelector("#PokeApiLink")
-    .addEventListener("click", () => initContent("PokeApi"));
-  
+    .querySelector("#Pokelink")
+    .addEventListener("click", () => initContent("Poke"));
+    document
+    .querySelector("#loginlink")
+    .addEventListener("click", () => initContent("Login"));
 };
 
 export const printTemplate = () => {

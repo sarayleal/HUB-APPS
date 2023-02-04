@@ -1,15 +1,16 @@
 import "./style.css";
+
 import { printTemplate as HeaderTemplate } from "./components/Header/Header";
 import { printTemplate as HomeTemplate } from "./pages/Home/Home";
 import { printTemplate as GamesTemplate } from "./pages/Games/Games";
 import { printTemplate as ColorTemplate } from "./pages/Color/Color";
-import { printTemplate as PokeApiTemplate } from "./pages/PokeApi/PokeApi";
-
+import { printTemplate as PokeTemplate } from "./pages/Poke/Poke";
+import { printTemplate as LoginTemplate } from "./pages/Login/Login";
 
 export const initContent = (route) => {
   switch (route) {
     case undefined:
-      HomeTemplate();
+      localStorage.getItem("user") ? HomeTemplate() : LoginTemplate();
       break;
     case "Home":
       HomeTemplate();
@@ -20,13 +21,14 @@ export const initContent = (route) => {
     case "Color":
       ColorTemplate();
       break;
-    case "PokeApi":
-      PokeApiTemplate();
+    case "Poke":
+      PokeTemplate();
       break;
-    
+    case "Login":
+      LoginTemplate();
+      break;
   }
 };
-
 
 HeaderTemplate();
 
