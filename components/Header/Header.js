@@ -16,9 +16,6 @@ const template = () => `
 <li>
 <a href="#" id="Pokelink">Poke</a>
 </li>
-<li>
-<a href="#" id="loginlink">Login</a>
-</li>
 </ul>
 </nav>
 `;
@@ -36,9 +33,7 @@ const addListeners = () => {
   document
     .querySelector("#Pokelink")
     .addEventListener("click", () => initContent("Poke"));
-    document
-    .querySelector("#loginlink")
-    .addEventListener("click", () => initContent("Login"));
+
 };
 
 export const printTemplate = () => {

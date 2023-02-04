@@ -5,7 +5,7 @@ import { printTemplate as HomeTemplate } from "./pages/Home/Home";
 import { printTemplate as GamesTemplate } from "./pages/Games/Games";
 import { printTemplate as ColorTemplate } from "./pages/Color/Color";
 import { printTemplate as PokeTemplate } from "./pages/Poke/Poke";
-import { printTemplate as LoginTemplate } from "./pages/Login/Login";
+
 
 export const initContent = (route) => {
   switch (route) {
@@ -24,9 +24,7 @@ export const initContent = (route) => {
     case "Poke":
       PokeTemplate();
       break;
-    case "Login":
-      LoginTemplate();
-      break;
+    
   }
 };
 

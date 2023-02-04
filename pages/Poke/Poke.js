@@ -1,40 +1,34 @@
 import "./Poke.css";
+import { initContent } from "../../main";
+import { getPokemons } from "../../components/pokeCard/pokeCard";
+import { filterByName } from "../../components/pokeCard/pokeCard";
 
 const template = () => `
-<section class="Poke">
-<h2>Poke</h2>
+<div id="pokemon-container">
+<div id="pokemon-filtered">
+<input type="text" id ="inputFilter" placeholder="INTRO NAME">
+<button id="buttonFilter"><img class='pokeball'src='https://res.cloudinary.com/damtbzspb/image/upload/v1675545336/pokeapi/pikachu_icon-icons.com_67535_c57djr.png' alt='pokeball pikachu'/></button>
+</div>
+<div id="selectorType">
+<ul class="TypeList"></ul>
+</div>
+<section id="cards"></section>
+</div>`;
 
-<div class="pokemonList"></div>
-</section>
-`;
-
-let data = [];
-const getData = async () => {
-  for (let i = 1; i < 152; i++) {
-    try {
-      const rawData = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
-      console.log(rawData);
-      const dataToJson = await rawData.json();
-      data.push(dataToJson);
-    } catch (error) {
-      console.log("no se ha podido hacer la peticion");
-    }
-  }
-};
-
-const printData = (list) => {
-  const pokemonList = document.querySelector("pokemonList");
-  for (const item of list) {
-    const figure = document.createElement("figure");
-    figure.innerHTML = `
-  <img src=${item.image} alt=${item.name}/>
-  <h3>${item.name}</h3>
-  <figcaption>${item.description}</figcaption>
-  `;
-  }
+const addListeners = () => {
+  const input = document.querySelector("#inputFilter"); 
+  document.querySelector("#start-button").addEventListener("click", () => {
+    initContent("Hub");
+  });
+  document.querySelector("#buttonFilter").addEventListener("click", () => {
+    document.querySelector("#cards").innerHTML = "";
+    console.log("click");
+    filterByName(input.value);
+  });
 };
 
 export const printTemplate = () => {
   document.querySelector("#app").innerHTML = template();
-  getData();
+  getPokemons();
+  addListeners();
 };
