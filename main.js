@@ -5,6 +5,7 @@ import { printTemplate as HomeTemplate } from "./pages/Home/Home";
 import { printTemplate as GamesTemplate } from "./pages/Games/Games";
 import { printTemplate as ColorTemplate } from "./pages/Color/Color";
 import { printTemplate as PokeTemplate } from "./pages/Poke/Poke";
+import { printTemplate as tresenRayaTemplate } from "./pages/Games/3_en_raya/3_en_raya";
 
 
 export const initContent = (route) => {
