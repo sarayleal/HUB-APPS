@@ -16,7 +16,7 @@ const template = () => `
 </div>`;
 
 const addListeners = () => {
-  const input = document.querySelector("#inputFilter"); 
+  const input = document.querySelector("#inputFilter");
   document.querySelector("#start-button").addEventListener("click", () => {
     initContent("Hub");
   });
@@ -29,6 +29,6 @@ const addListeners = () => {
 
 export const printTemplate = () => {
   document.querySelector("#app").innerHTML = template();
-  getPokemons();
+  template();
   addListeners();
 };
